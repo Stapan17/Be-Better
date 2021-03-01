@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: bisque;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .header {
+            color: brown;
+        }
+
+        .btn {
+            height: 60px;
+            font-size: 40px;
+            color: aqua;
+            background-color: black;
+            border-radius: 15px;
+            margin-top: 80px;
+            width: 20%;
+            cursor: pointer;
+        }
+
+        .text {
+            border-radius: 15px;
+            margin-top: 50px;
+            font-size: 25px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <center>
+        <h1 class="header">How Was your Day ?</h1>
+
+
+        <form action="" method="POST">
+
+            {% csrf_token %}
+            <textarea name="text" cols="70" rows="13" required id="id_text" class="text"
+                placeholder="Describe Your Day Breifly"></textarea>
+
+            <br><input type="submit" value="Add" class="btn">
+        </form>
+    </center>
+</body>
+
+</html>
